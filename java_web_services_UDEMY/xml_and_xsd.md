@@ -1,14 +1,18 @@
 ## Notes about Java Web Services course in Udemy
 ### link: https://www.udemy.com/course/java-web-services/?deal_code=&utm_source=aff-campaign&utm_medium=udemyads&utm_term=Homepage&utm_content=Textlink&utm_campaign=Admitad-default&admitad_uid=ffc0be993b2a2efb4a3364860685f26e
 
+------------------
+
 **What are XML services?**
 
 The format xml is used to exchange information throught the internet for direct application-to-application communication;
 
+------------------
+
 **The difference XML and HTML**
 
 XML was designed to hold data, instead HTML focus on display data. Also, the tags in xml file are not predefined as in HTML.
-
+------------------
 **Note:** 
 
 The XML file must have a root element that is the parent of all others elements;
@@ -23,19 +27,23 @@ example:
 </note>
 ```
 
-the <note> is the root element.
+the `<note>` is the root element.
 
+------------------
+**Note:**
 
-Note: the XML prolog
-<?xml version="1.0" encoding="UTF-8"?>
-it is optional.
+the XML prolog
+`<?xml version="1.0" encoding="UTF-8"?>` it is optional.
 UTF-8 is the default for XML files.
 
+------------------
+**Note:** 
 
-Note: XML tags are case sensitive.
+XML tags are case sensitive.
 
+------------------
+**What's the difference between element and attribute?**
 
-What's the difference between element and attribute?
 r: the attributes is information related to the element. The value of the attribute goes inside the tag. The elements inside an element are like
 a more complex attributes for the element parent. Take a look at the example below:
 
@@ -53,3 +61,12 @@ info gender as element:
   <lastname>Smith</lastname>
 </person>
 ```
+
+the *gender* will be the same info to *person*. In the first example gender is an attribute. In the last, gender is an element. Both examples provide the same information.
+
+some points to consider when trying to use **attributes**
+
+    1. cannot contain multiple values
+    2. cannot contain tree structure (attributes of the attribute)
+
+
