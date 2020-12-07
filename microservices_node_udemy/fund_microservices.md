@@ -32,3 +32,22 @@ We never access data for feature A in a database B. neighter for feature B in db
 ## Communication Strategies: Async and Sync
 Sync: services communicate with each other using direct requests
 Async: services communicate with each other using **events**
+
+A problem with using Sync communication:
+ex: 
+    we have 4 services:
+    1.  Code to sign up a user
+    2. Code to list avaliable products
+    3. Code to purchase a product
+    
+    4. code to show products ordered by a particular user
+
+    service 4 requires all other 'services' (1,2 and 3) in order to response the required data. That said, if Service 1 has a problem, then the whole execution of Serrvice 4 will be compromised.
+
+    also another problem is about the time execution. The execution of service 4 is equal to the slowest service (1,2 or 3);
+
+
+    With Microservices we do this differently: We use a **Event Bus** to handle event notifications (some happened) or receive info.
+
+
+    
