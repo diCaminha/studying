@@ -14,3 +14,21 @@ A single microservice contains:
 - business logic
 - database access
  to implement **one feature of our app**
+
+
+ ## Data in Microservices
+
+One of the big challenges when decided to go on a microservice architecture is about the data management between services. 
+Once all the features are separated even in different database so we need to create a logic to orchestrate the info among the
+many services.
+
+We need different databases for each feature in order to:
+- run services/features independently of others
+- schema might change
+- some services might works better in a specific type of db
+
+We never access data for feature A in a database B. neighter for feature B in db A.
+
+## Communication Strategies: Async and Sync
+Sync: services communicate with each other using direct requests
+Async: services communicate with each other using **events**
