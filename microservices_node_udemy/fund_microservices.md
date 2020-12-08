@@ -53,5 +53,8 @@ ex:
 ## Pros and Cons of Async communication
 A first advantage would be that Service 4 has zero dependency on other services! We might say that the dependency of Service 4 on the others is an indirect dependency, since the service 4 can still answer requests even if all other services are down.
 
+As a 'problem' for async would be the amount of data duplication. But, the amount to pay is not that relevant value. So we're fine to duplicate data and pay for the extra data.
+
+You might say that it's harder to understand, and that's the second point of 'cons' for async comunication.
 
 
