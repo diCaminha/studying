@@ -36,11 +36,11 @@ Async: services communicate with each other using **events**
 A problem with using Sync communication:
 ex: 
     we have 4 services:
-    1.  Code to sign up a user
-    2. Code to list avaliable products
-    3. Code to purchase a product
+    Service 1.  Code to sign up a user
+    Service 2. Code to list avaliable products
+    Service 3. Code to purchase a product
     
-    4. code to show products ordered by a particular user
+    Service 4. code to show products ordered by a particular user
 
     service 4 requires all other 'services' (1,2 and 3) in order to response the required data. That said, if Service 1 has a problem, then the whole execution of Serrvice 4 will be compromised.
 
@@ -50,4 +50,8 @@ ex:
     With Microservices we do this differently: We use a **Event Bus** to handle event notifications (some happened) or receive info.
 
 
-    
+## Pros and Cons of Async communication
+A first advantage would be that Service 4 has zero dependency on other services! We might say that the dependency of Service 4 on the others is an indirect dependency, since the service 4 can still answer requests even if all other services are down.
+
+
+
