@@ -17,8 +17,12 @@ Others can use of our application and extend to other funcionality in their serv
 We can integrate with lots of services, building a mashup system.
 
 
-# SOAP
+## SOAP
 It uses XML and HTTP (POST) to communication between services over the web.
 
-# RESTful
+## RESTful
 It uses multiples formats (XML, JSON, plain text) using the HTTP methods GET, POST, PUT, DELETE...
+
+## Java web services standards
+- SOAP --> JAX-WS
+- REST --> JAX-RS
