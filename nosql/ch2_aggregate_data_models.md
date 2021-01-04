@@ -23,4 +23,14 @@ In the NoSQL world, they put away that relational data model, and creates differ
  
 ## Aggregates
 
+  Key/Value and Document are strongly aggregate-oriented database. They are constructed through aggregates. Both of these types consist of lots of
+  aggregates with each aggregate having a key or ID that's used to get the data.
+  
+  The difference between them is that in a key-value db the aggregate is opaque to the database, so we can't see what really is the aggregate information.
+  So we can store anything we want without be worry about types or whatever it is.
+  In document, we have types that should be respected by the data used in the aggregation. 
+  
+  The downside of this for key-value is we can only query bu the key, instead, in a document db, we can submit queries based on the fields in the aggregate,
+  we can retrieve part of the aggregate rather than the whole thing. Also the db can create indexes based on the contents of the aggregate.
+  
   
